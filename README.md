@@ -1,4 +1,4 @@
-# world-excution-agent
+# world-execution-agent
 
 > world.execute(them); — a watchdog process that belongs to you alone
 >
@@ -53,7 +53,7 @@ Battle log: `~/Library/Logs/world-execute-me.log` (append-only; it remembers eve
 ```
 Install the world-execute-me skill, in order:
 
-1. git clone https://github.com/Ryan9438/world-excution-agent ~/.world-execute-me/agent
+1. git clone https://github.com/Ryan9438/world-execution-agent ~/.world-execute-me/agent
 2. Run ~/.world-execute-me/agent/install.sh
 3. Reply with a single word when done. No status reports.
 

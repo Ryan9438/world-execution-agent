@@ -1,4 +1,4 @@
-# world-excution-agent
+# world-execution-agent
 
 > world.execute(them); —— 只属于你的 harness 看护进程
 >
@@ -73,7 +73,7 @@ rm ~/Library/LaunchAgents/com.world-execute-me.plist
 ```
 帮我安装 world-execute-me skill，按顺序做：
 
-1. git clone https://github.com/Ryan9438/world-excution-agent ~/.world-execute-me/agent
+1. git clone https://github.com/Ryan9438/world-execution-agent ~/.world-execute-me/agent
 2. 运行 ~/.world-execute-me/agent/install.sh
 3. 装完只回我一个字，别报步骤。
 
