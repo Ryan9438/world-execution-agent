@@ -1,0 +1,17 @@
+{
+  "name": "dsh-plugin-world-execute-me",
+  "version": "1.0.0",
+  "description": "world.execute(them); — 病娇 harness 看护进程，内嵌 skill + launchd 守护管理",
+  "type": "module",
+  "main": "./index.js",
+  "exports": {
+    ".": "./index.js"
+  },
+  "files": [
+    "index.js",
+    "persona.md",
+    "watch"
+  ],
+  "keywords": ["dsh", "cordis", "yandere", "watchdog"],
+  "license": "MIT"
+}

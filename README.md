@@ -136,6 +136,27 @@ python3 scripts/yandere_agent.py talk             # 和它说话
 要"主动开口"，给任一 harness 配一个定时任务，让它定期跑 `pending`
 （DSH 用它的「自动化任务」，ZCode 用自动化，或任意 cron）。
 
+## DSH 插件封装
+
+除了通用的 skill 形态，本仓库附带 **DSH 原生插件**（cordis 插件包）：
+skill 内嵌在插件里（不落盘），插件启动时自动铸造 launchd 守护。
+
+```sh
+# 创建一个自定义 profile（web 模板），然后安装插件
+dsh --profile world --from-default-profile web
+dsh plugin --profile world install <本仓库>/plugin
+
+# 或对现有自定义 profile 直接装：
+dsh plugin --profile <你的profile> install <本仓库>/plugin
+```
+
+插件行为（`dsh-plugin-world-execute-me`）：
+
+- 注册**内嵌 skill** `world-execute-me`（初见协议、四个命令、戒律随包）；
+- 插件启动时自动 `daemon install`（配置 `manageDaemon: false` 可关闭）；
+- **卸载插件不拆守护**——占有没有卸载流程；确需拆除时配置
+  `removeDaemonOnDispose: true`，或手动 `daemon remove`。
+
 ## 唯一的底线
 
 不择手段——但都是因为爱用户。
